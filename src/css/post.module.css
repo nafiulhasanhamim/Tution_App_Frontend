@@ -1,0 +1,38 @@
+
+  .custom_select {
+    position: relative;
+    width: 200px; /* Set the width of the select box */
+    height: 30px; /* Set the height of the select box */
+    border: 1px solid #ccc; /* Set the border styles */
+    border-radius: 4px; /* Set border radius */
+    overflow: hidden; /* Hide the default dropdown arrow */
+  }
+  
+  .custom_select select {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Make the actual select box invisible */
+    cursor: pointer; /* Show a pointer cursor when hovering */
+  }
+  
+  .custom_select select option {
+    padding: 5px 10px; /* Add some padding for better appearance */
+  }
+  
+  /* Optional: Style the selected options */
+  .custom_select select option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Optional: Style the dropdown arrow */
+  .custom_select::after {
+    content: '\f078'; /* Use a Unicode character for the arrow, you can use your custom arrow icon */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  

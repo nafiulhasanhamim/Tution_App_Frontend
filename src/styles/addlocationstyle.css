@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 'Poppins,sans-serif';
+}
+body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1,h2{
+  color: #444;
+}
+.side-menu{
+    position: fixed;
+    background: #f05462;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .brand-name{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-menu li{
+    font-size: 24px;
+    padding: 10px 40px;
+    color: wheat;
+    display: flex;
+    align-items: center;
+}
+.side-menu li:hover{
+    background:white;
+    color: #f05462;
+}
+
+/* new */
+.container{
+    position:absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+.container .header{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 15vh;
+    background:white;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .search{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.container .header .nav .search input[type=text]{
+    border: none;
+    background: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+}
+.container .header .nav .search button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .header .nav .search button img{
+    width:30px;
+    height: 30px;
+}
+.container .header .nav .user{
+    flex:1;
+    
+}
+.btn{
+    background: #f05462;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+.btn:hover{
+    color: #f05462;
+    background: white;
+    padding: 3px 8px;
+    border: 4px dotted #f05462;
+}
+.container .header .nav .user{
+     flex:1;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.container .header .nav .user img{
+    height: 50px;
+    width: 50px;
+}
+.container .header .nav .user .img-case{
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+.container .header .nav .user .img-case img {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.AA img{
+    height: 20px;
+    width: 20px;
+}
+.box input{
+    padding:15px;
+    width: 420px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 3px solid yellowgreen;
+}
+.container .content{
+    position: relative;
+    margin-top: 35vh;
+    max-height: 0vh;
+    margin-left: 35vh;
+}
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: wrap;
+}
+.container .content .cards .card{
+    width: 450px;
+    height: 300px;
+    background: white;
+    margin:20px 50px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) ;
+}
+.container .content .cards .card .box{ 
+    padding-left: 15px;
+}
+.container .content .cards .card .box .mm{ 
+    padding-left: 35px;
+    color: #999;
+    font-size: 25px;
+} 
+h1{
+    color:#f05462;
+}
+.container .content .cards .card .box .ww{
+    background:green;
+    color:white;
+    height: 40px;
+    width: 180px;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 130px;
+    border-radius: 20px;
+}
+.container .content .content-2{
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.container .content .content-2 .recent-payments{
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) ;
+    display: flex;
+    flex-direction: column;
+}
+.container .content .content-2 .new-students{
+    flex: 2;
+    background: white;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) ;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
+table{
+    padding: 10px;
+}
+th,td{
+    text-align: left;
+    padding: 8px;
+}
+.container .content .content-2 .new-students table td:nth-child(1) img{
+     height: 40px;
+     width: 40px;
+}
+td .ww{
+   
+        background:gray;
+        color:white;
+        height: 30px;
+        width: 70px;
+        font-weight: 500;
+}
+.side-menu .brand-name .arif{
+    font-size: 40px;
+}

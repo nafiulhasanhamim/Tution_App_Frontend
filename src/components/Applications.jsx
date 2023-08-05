@@ -21,9 +21,12 @@ const Applications = () => {
 
   useEffect(() => {
     axios
-      .post("https://tution-project-backend-iuym.vercel.app/guardian-profile", {
-        guardian_id,
-      })
+      .post(
+        "https://tution-project-backend-iuym.vercel.app/guardians/guardian-profile",
+        {
+          guardian_id,
+        }
+      )
       .then((res) => {
         setGuardian(res?.data?.users[0]);
         return axios.get(

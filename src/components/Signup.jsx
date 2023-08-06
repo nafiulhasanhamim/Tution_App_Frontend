@@ -164,6 +164,14 @@ const Signup = () => {
     }
   };
 
+  const handleBlur = () => {
+    const isSecurePass = isSecurePassword(password);
+    if (!isSecurePass) {
+      errorToast(
+        "Password consists of atleast 6 characters, at least one number and one letter..."
+      );
+    }
+  };
   const handleChange = (e) => {
     setFormInfo((prev) => ({
       ...prev,
@@ -212,6 +220,7 @@ const Signup = () => {
               required
               value={password}
               onChange={handleChange}
+              onBlur={handleBlur}
               className={styles.signup_inp}
               placeholder="enter your password"
             />

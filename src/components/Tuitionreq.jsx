@@ -14,7 +14,11 @@ const Tuitionreq = ({ post }) => {
       <div className={styles.tuition_req}>
         <span>{tution_id}</span>
         <span>{location_name}</span>
-        <span>{phone_number}</span>
+        <span>
+          {assigned_status === "Approved"
+            ? phone_number
+            : phone_number.substring(0, 5)}
+        </span>
         <span>{subject_name}</span>
         <span>{salary}</span>
         <span>{number_of_days}</span>

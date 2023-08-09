@@ -17,7 +17,7 @@ const Tuitionreq = ({ post }) => {
         <span>
           {assigned_status === "Approved"
             ? phone_number
-            : phone_number.substring(0, 5)}
+            : `${phone_number.substring(0, 5)}******`}
         </span>
         <span>{subject_name}</span>
         <span>{salary}</span>

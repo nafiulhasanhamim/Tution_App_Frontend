@@ -1,4 +1,4 @@
-*{
+  *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -16,6 +16,8 @@ li{
 h1,h2{
   color: #444;
 }
+
+
 .side-menu{
     position: fixed;
     background: #f05462;
@@ -171,13 +173,13 @@ h3{
 .container .content .content-2{
     min-height: 60vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 .container .content .content-2 .recent-payments{
     min-height: 50vh;
-    flex: 5;
+    /* flex: 5; */
     background: white;
     margin: 0 25px 25px 25px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) ;

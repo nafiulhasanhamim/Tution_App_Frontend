@@ -23,6 +23,7 @@ import Error from "../components/Error";
 import Logout from "../components/Logout";
 import Applications from "../components/Applications";
 import AssignedTutions from "../components/AssignedTutions";
+import AddSubject from "../adminComponents/AddSubject";
 
 const Routers = () => {
   const role = useSelector((state) => state.userinfo.userinfo.role);
@@ -60,6 +61,7 @@ const Routers = () => {
           <>
             <Route path="/admin/get-all-locations" element={<AllLocations />} />
             <Route path="/admin/add-location" element={<AddLocation />} />
+            <Route path="/admin/add-subject" element={<AddSubject />} />
             <Route path="/admin/get-all-guardians" element={<GuardianList />} />
             <Route
               path="/admin/get-all-pending-tutors"

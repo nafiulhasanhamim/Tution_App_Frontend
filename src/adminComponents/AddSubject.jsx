@@ -7,31 +7,64 @@ import notification from "../../public/images/notificatio.png";
 import student from "../../public/images/student.png";
 import user from "../../public/images/user.png";
 import { Link } from "react-router-dom";
-import "../styles/guardianstyle.css";
-const ApprovedTutors = () => {
-  const [tutors, setTutors] = useState([]);
+import "../styles/addlocationstyle.css";
+
+const AddSubject = () => {
+  const successMessage = (message) => {
+    toast.success(message, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const errorMessage = (message) => {
+    toast.success(message, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const [subject_name, setSubject] = useState("");
   const userinfo = JSON.parse(localStorage.getItem("userinfo"));
   const token = userinfo?.token;
   const headers = {
     "Content-Type": "application/json",
     Authorization: `${token}`,
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+      axios
+        .post(
+          "https://tution-project-backend-iuym.vercel.app/add-subject",
+          { subject_name },
+          {
+            headers,
+          }
+        )
+        .then((res) => {
+          setSubject("");
+          if (res?.data?.message === "Subject has successfully been added") {
+            successMessage(res.data.message);
+          } else {
+            errorMessage(res.data.message);
+          }
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://tution-project-backend-iuym.vercel.app/admin/get-all-approved-tutors",
-        {
-          headers,
-        }
-      )
-      .then((response) => {
-        setTutors(response?.data?.users);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
   return (
     <>
       <div className="side-menu">
@@ -86,36 +119,22 @@ const ApprovedTutors = () => {
       </div>
       <div className="container">
         <div className="content">
-          <div className="content-2">
-            <div className="recent-payments">
-              <div className="title">
-                <h2>Approved Tutors List</h2>
+          <div className="cards">
+            <div className="card">
+              <div className="box">
+                <form onSubmit={handleSubmit}>
+                  <input
+                    required
+                    onChange={(e) => setSubject(e.target.value)}
+                    value={subject_name}
+                    type="text"
+                    placeholder="Enter Subject.."
+                  />
+                  <button type="submit" className="ww">
+                    Add-Subject
+                  </button>
+                </form>
               </div>
-              <table>
-                <tr>
-                  {/* <th>Image</th> */}
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                </tr>
-                {tutors?.map((tutor) => {
-                  const { user_id, name, email, phone_number, id_card } = tutor;
-                  return (
-                    <>
-                      <tr>
-                        {/* <td>
-                          <a href={`http://${id_card}`} target="_blank">
-                            View
-                          </a>
-                        </td> */}
-                        <td>{name}</td>
-                        <td>{email}</td>
-                        <td>{phone_number}</td>
-                      </tr>
-                    </>
-                  );
-                })}
-              </table>
             </div>
           </div>
         </div>
@@ -124,4 +143,4 @@ const ApprovedTutors = () => {
   );
 };
 
-export default ApprovedTutors;
+export default AddSubject;

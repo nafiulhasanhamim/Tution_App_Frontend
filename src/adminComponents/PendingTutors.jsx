@@ -8,6 +8,7 @@ import student from "../../public/images/student.png";
 import user from "../../public/images/user.png";
 import { Link } from "react-router-dom";
 import "../styles/pendingtutor.css";
+// import "../styles/styles.css";
 const PendingTutors = () => {
   const userinfo = JSON.parse(localStorage.getItem("userinfo"));
   const token = userinfo?.token;
@@ -119,22 +120,22 @@ const PendingTutors = () => {
             &nbsp;{" "}
             <Link to="/admin/get-all-pending-tutors">All-Pending Tutors</Link>
           </li>
-          <li className="AA">
+          {/* <li className="AA">
             <img src={home} />
             &nbsp;{" "}
             <Link to="/admin/get-all-approved-tutors">All-Approved Tutors</Link>
-          </li>
-          <li className="AA">
+          </li> */}
+          {/* <li className="AA">
             <img src={home} />
             &nbsp; <Link to="/admin/get-all-guardians">All-Guardian</Link>
-          </li>
-          <li className="AA">
+          </li> */}
+          {/* <li className="AA">
             <img src={home} />
             &nbsp;{" "}
             <Link to="/admin/get-all-approved-tutions">
               All Approved Tutions
             </Link>
-          </li>
+          </li> */}
           <li className="AA">
             <img src={home} />
             &nbsp;
@@ -146,8 +147,12 @@ const PendingTutors = () => {
           </li>
           <li className="AA">
             <img src={home} />
-            &nbsp;<Link to="/admin/get-all-locations">All-Location</Link>
+            &nbsp; <Link to="/admin/add-subject">Add Subject</Link>
           </li>
+          {/* <li className="AA">
+            <img src={home} />
+            &nbsp;<Link to="/admin/get-all-locations">All-Location</Link>
+          </li> */}
           <li className="AA">
             <img src={home} />
             &nbsp;
@@ -156,33 +161,10 @@ const PendingTutors = () => {
         </ul>
       </div>
       <div className="container">
-        <div className="header">
-          <div className="nav">
-            <div className="search">
-              <input type="text" placeholder="search.." />
-              <button type="submit">
-                <img src={search} />
-              </button>
-            </div>
-            <div className="user">
-              <a href="#" className="btn">
-                Add new
-              </a>
-              <img src={notification} />
-              <div className="img-case">
-                <img src={user} />
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="content-2" style={{ margin: "100px" }}>
           <div class="recent-payments">
             <div class="title">
-              <h2>Pending Tutor</h2>
-              <a href="#" class="btn">
-                Viwe All
-              </a>
+              <h1>Pending Tutor</h1>
             </div>
             <table>
               <tr>
@@ -199,11 +181,6 @@ const PendingTutors = () => {
                 return (
                   <>
                     <tr>
-                      {/* <td>
-                        <a href={`http://${id_card}`} target="_blank">
-                          View
-                        </a>
-                      </td> */}
                       <td>{name}</td>
                       <td>{email}</td>
                       <td>{phone_number}</td>
@@ -242,5 +219,4 @@ const PendingTutors = () => {
     </>
   );
 };
-
 export default PendingTutors;

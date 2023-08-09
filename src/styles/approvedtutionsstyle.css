@@ -147,7 +147,7 @@ h1,h2{
 }
 .container .content .cards .card{
     width: 450px;
-    height: 650px;
+    height: 680px;
     background: white;
     margin:20px 50px ;
     display: flex;

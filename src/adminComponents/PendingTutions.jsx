@@ -117,22 +117,22 @@ const PendingTutions = () => {
             &nbsp;{" "}
             <Link to="/admin/get-all-pending-tutors">All-Pending Tutors</Link>
           </li>
-          <li className="AA">
+          {/* <li className="AA">
             <img src={home} />
             &nbsp;{" "}
             <Link to="/admin/get-all-approved-tutors">All-Approved Tutors</Link>
-          </li>
-          <li className="AA">
+          </li> */}
+          {/* <li className="AA">
             <img src={home} />
             &nbsp; <Link to="/admin/get-all-guardians">All-Guardian</Link>
-          </li>
-          <li className="AA">
+          </li> */}
+          {/* <li className="AA">
             <img src={home} />
             &nbsp;{" "}
             <Link to="/admin/get-all-approved-tutions">
               All Approved Tutions
             </Link>
-          </li>
+          </li> */}
           <li className="AA">
             <img src={home} />
             &nbsp;{" "}
@@ -144,8 +144,12 @@ const PendingTutions = () => {
           </li>
           <li className="AA">
             <img src={home} />
-            &nbsp;<Link to="/admin/get-all-locations">All-Location</Link>
+            &nbsp; <Link to="/admin/add-subject">Add Subject</Link>
           </li>
+          {/* <li className="AA">
+            <img src={home} />
+            &nbsp;<Link to="/admin/get-all-locations">All-Location</Link>
+          </li> */}
           <li className="AA">
             <img src={home} />
             &nbsp;
@@ -154,26 +158,6 @@ const PendingTutions = () => {
         </ul>
       </div>
       <div className="container">
-        <div className="header">
-          <div className="nav">
-            <div className="search">
-              <input type="text" placeholder="search.." />
-              <button type="submit">
-                <img src={search} />
-              </button>
-            </div>
-            <div className="user">
-              <a href="#" className="btn">
-                Add new
-              </a>
-              <img src={notification} />
-              <div className="img-case">
-                <img src={user} />
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="content">
           <div class="cards">
             {tutions?.map((tution) => {

@@ -115,7 +115,7 @@ const Postfiltering = () => {
                 <input
                   type="radio"
                   name="tution_type"
-                  value="Home Tution"
+                  value="Home"
                   onChange={handleFilterChange}
                 />{" "}
                 <span>Home Tution</span>

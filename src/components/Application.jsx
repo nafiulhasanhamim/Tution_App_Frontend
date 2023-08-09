@@ -29,7 +29,7 @@ const Application = ({ post, assignedTution }) => {
         <span>{splitName(applicant_name)}</span>
         <span>{applicant_email}</span>
         <span>{applicant_phone_number}</span>
-        <span>{number_of_days} Days</span>
+        {/* <span>{number_of_days} Days</span> */}
         <span>{salary}</span>
         <button type="button" onClick={handleAssign} className={styles.greeN}>
           Assigned

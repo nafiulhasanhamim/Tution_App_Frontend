@@ -2,7 +2,7 @@
 
 ## Description
 
-The Tuition Media Platform is a web application developed to facilitate the connection between tutors and guardians for tuition opportunities. It leverages React, Redux Toolkit (RTK), Express.js, and PostgreSQL to create a robust and secure platform with features such as dual authentication, tutor verification workflow, guardian tuition postings, and more.
+The Tuition Media Platform is a web application developed to facilitate the connection between tutors and guardians for tuition opportunities. It leverages React, Redux Toolkit (RTK), Express.js, and PostgreSQL to create a robust and secure platform with features such as dual authentication, tutor verification workflow, guardian tuition postings, and more.This repository contains client side code only
 
 ## Features
 

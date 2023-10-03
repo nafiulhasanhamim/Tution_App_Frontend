@@ -1,12 +1,16 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "../css/signin.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { errorToast, successToast } from "./Toast";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getInfo } from "../features/userQuery/userinfoSlice";
 import { getRoleInfo } from "../features/userQuery/roleSlice";
 const Signin = () => {
+  useEffect(() => {
+    const platform = navigator.platform.toUpperCase();
+    console.log(platform);
+  }, []);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [loginInfo, setLoginInfo] = useState({

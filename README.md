@@ -1,4 +1,4 @@
-# Tuition Media Platform
+# Tuition Media Platform Only for CUET
 
 ## Description
 

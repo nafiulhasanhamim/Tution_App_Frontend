@@ -54,5 +54,3 @@ The Tuition Media Platform is a web application developed to facilitate the conn
 ## Project Outcome
 
 The Tuition Media Platform demonstrated my ability to create a secure, role-based web application with complex workflows, contributing to improved efficiency in the tutor-guardian matching process.
-
-Feel free to customize the language and details according to your project and experiences.
